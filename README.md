@@ -1,2 +1,4 @@
 # photo-library-sample
-Example Application To Implement Different Javascript MVC libraries
+Repo contains sample photo library applications that implement different Javascript MVC libraries.
+
+
