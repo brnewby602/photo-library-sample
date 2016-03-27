@@ -3,8 +3,14 @@ var ImageRowView = Backbone.View.extend({
   tagName: 'tr',
   className: 'image-row',
 
+  events: {
+    'click': 'rowClicked'
+  },
+
   initialize: function() {
-     // console.log('inside ImageRowView initialize');
+
+     this.on('click', this.rowClicked);
+
      this.render();
   },
 
@@ -12,6 +18,13 @@ var ImageRowView = Backbone.View.extend({
      
      this.$el.append(this.model.get('description'));
      return this;
+  },
+
+  rowClicked: function(imageModel) {
+
+    // TODO: must display this image in the ImageView
+
+    console.log('row clicked: ' + imageModel);
   }
 
 });
