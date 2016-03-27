@@ -1,7 +1,6 @@
 var ImageListView = Backbone.View.extend({
 
-  tagName: 'table',
-  className: 'image-list',
+  className: 'image-list left',
 
   initialize: function() {
     this.render();
@@ -9,8 +8,9 @@ var ImageListView = Backbone.View.extend({
 
   render: function() {
   
-    
-    this.$el.append('<thead><th>Images</th></thead>');
+    var table = $('<table></table>'); 
+
+    table.append('<thead><th>Images</th></thead>');
 
     var tableBody = $('<tbody></tbody>');
 
@@ -18,7 +18,9 @@ var ImageListView = Backbone.View.extend({
       return new ImageRowView({model:imageModel}).$el;       
     }));
     
-    this.$el.append(tableBody);
+    table.append(tableBody);
+
+    this.$el.append(table);
     
     return this;
   }

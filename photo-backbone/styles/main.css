@@ -16,3 +16,16 @@ body {
   width: 500px;
   height: 400px;
 }
+
+.left {
+  width: 400px;
+  float: left;
+}
+
+.right {
+  margin-left: 500px;
+}
+
+.clear {
+  clear: both;
+}
