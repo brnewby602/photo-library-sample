@@ -4,13 +4,10 @@ var ImageView = Backbone.View.extend({
 
   initialize: function() {
      this.render();
-     debugger;
   },
 
   render: function() {
      
-
-     console.log('<img class=\'image\' src=' + this.model.get('src') + '/>');
      this.$el.append('<img class=\'image\' src=\'' + this.model.get('src') + '\'/>');
 
      var container = $('<div></div>');

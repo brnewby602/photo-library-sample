@@ -24,7 +24,9 @@ var ImageRowView = Backbone.View.extend({
 
     // TODO: must display this image in the ImageView
 
-    console.log('row clicked: ' + imageModel);
+    this.model.clicked();
+
+    // console.log('row clicked: ' + imageModel);
   }
 
 });
