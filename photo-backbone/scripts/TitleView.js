@@ -13,7 +13,9 @@ var TitleView = Backbone.View.extend({
   },
 
   render: function() {
-    return this.$el.html(this.model.get('name'));
+    this.$el.text(this.model.get('name'));
+
+    return this;
   }
 
 });

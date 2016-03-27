@@ -11,9 +11,11 @@ var AppView = Backbone.View.extend({
 
     // clear out the html inside the <div id='app'> element
     this.$el.html('');
-    this.$el.append(this.titleView.render());
+    this.$el.append(this.titleView.$el);
+
+    this.$el.append(this.imageListView.$el);
     
-    // append the ImageListView and ImageView's
+    // ImageView's $el
 
     return this;
   }

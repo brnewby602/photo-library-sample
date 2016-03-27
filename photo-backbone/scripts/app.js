@@ -26,11 +26,8 @@ var images = [
 ];
 
 var title = {name: 'Photo Library App', language: 'en'};
+var myApp = new AppView({el: '#app', imageList: new ImageList(images), title: new TitleModel(title)});
 
-
-
-
-var myApp = new AppView({el: '#app', imageList: images, title: new TitleModel(title)});
 
 
 
