@@ -19,6 +19,15 @@ var ImageView = Backbone.View.extend({
      var container = $('<div></div>');
      container.append('<span style=\'padding-right: 30px\'>' + this.model.get('description') + '</span>');
      container.append('<span>' + this.model.get('rating') + ' out of 5</span>');
+     container.append('<span style=\'padding-left: 15px\'><select> ' +
+        '<option value=\'0\'>0</option>' +
+        '<option value=\'1\'>1</option>' +
+        '<option value=\'2\'>2</option>' + 
+        '<option value=\'3\'>3</option>' + 
+        '<option value=\'4\'>4</option>' +
+        '<option value=\'5\'>5</option>' +
+      '</select></span>');
+
    
      this.$el.append(container);    
 
