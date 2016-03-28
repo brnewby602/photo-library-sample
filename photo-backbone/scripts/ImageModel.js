@@ -8,7 +8,7 @@ var ImageModel = Backbone.Model.extend({
 
   clicked: function() {
     console.log('I\'ve been clicked');
-    // this.trigger('')  -->  DO I NEED TO DO THIS???
+    this.trigger('clicked', this); 
   }
 
 });
