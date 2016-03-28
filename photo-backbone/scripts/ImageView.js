@@ -11,12 +11,7 @@ var ImageView = Backbone.View.extend({
   },
 
   render: function() {
-     console.log('inside render!!!');
-     console.log(this.model.get('description'));
-     console.log(this.model.get('src'));
-     console.log(this.model.get('rating'));
-
-
+     
      this.$el.html('');
      this.$el.append('<img class=\'image\' src=\'' + this.model.get('src') + '\'/>');
 
@@ -46,6 +41,8 @@ var ImageView = Backbone.View.extend({
   },
 
   ratingChanged: function(selectEvent) {
+debugger;
+    console.log(this.$el.val());
     this.model.changeRating(selectEvent.currentTarget.value);
     this.render();
   }

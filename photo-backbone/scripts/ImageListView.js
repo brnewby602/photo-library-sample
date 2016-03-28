@@ -4,9 +4,15 @@ var ImageListView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
+
+    this.collection.on('add', function() {
+      this.render();
+    }, this);
   },
 
   render: function() {
+
+    this.$el.html('');
   
     var table = $('<table></table>'); 
 

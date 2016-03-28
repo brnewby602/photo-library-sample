@@ -3,6 +3,9 @@ var AppView = Backbone.View.extend({
   initialize: function(params) {
 
     this.titleView = new TitleView({model: this.model.get('title')});
+
+    this.newImageView = new NewImageView({collection: this.model.get('photoList')});
+
     this.imageListView = new ImageListView({collection: this.model.get('photoList')});
 
 
@@ -22,6 +25,7 @@ var AppView = Backbone.View.extend({
   render: function() {
      return this.$el.html([
       this.titleView.$el,
+      this.newImageView.$el,
       this.imageListView.$el,
       this.imageView.$el
     ]);
