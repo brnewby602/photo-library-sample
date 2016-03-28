@@ -41,8 +41,6 @@ var ImageView = Backbone.View.extend({
   },
 
   ratingChanged: function(selectEvent) {
-debugger;
-    console.log(this.$el.val());
     this.model.changeRating(selectEvent.currentTarget.value);
     this.render();
   }
