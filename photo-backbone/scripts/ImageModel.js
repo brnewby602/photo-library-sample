@@ -7,8 +7,11 @@ var ImageModel = Backbone.Model.extend({
   },
 
   clicked: function() {
-    console.log('I\'ve been clicked');
     this.trigger('clicked', this); 
+  },
+
+  changeRating: function(rating) {
+    this.set('rating', rating);  
   }
 
 });

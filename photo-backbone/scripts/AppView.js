@@ -11,12 +11,7 @@ var AppView = Backbone.View.extend({
     this.imageView = new ImageView({model: this.model.get('currentPhoto')});
 
     this.model.on('change:currentPhoto', function(imageModel) {
-
-       console.log('inside change:currentPhoto of AppView!!');
-
-       debugger;
        var currentPhoto = this.model.get('currentPhoto');
-
        this.imageView.setCurrentImage(currentPhoto);
     }, this);
 
@@ -25,28 +20,11 @@ var AppView = Backbone.View.extend({
   },
 
   render: function() {
-
-
      return this.$el.html([
       this.titleView.$el,
       this.imageListView.$el,
       this.imageView.$el
     ]);
-
-    // clear out the html inside the <div id='app'> element
-    /*
-    this.$el.html('');
-    this.$el.append(this.titleView.$el);
-
-    this.$el.append(this.imageListView.$el);
-
-    this.$el.append(this.imageView.$el);
-
-    
-    // ImageView's $el
-
-    return this;
-    */
   }
 
 });
