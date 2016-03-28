@@ -1,0 +1,31 @@
+body {
+  background-color: #c9f1fe;
+}
+
+.image-list  {
+  text-align: left;
+  background-color: white;
+  border-collapse:collapse;
+}
+
+.image-list thead {
+  background-color: gray;
+}
+
+.image-viewer .image {
+  width: 500px;
+  height: 400px;
+}
+
+.left {
+  width: 400px;
+  float: left;
+}
+
+.right {
+  margin-left: 500px;
+}
+
+.clear {
+  clear: both;
+}
