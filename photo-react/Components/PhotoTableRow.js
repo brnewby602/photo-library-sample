@@ -10,7 +10,7 @@ class PhotoTableRow extends React.Component {
 
   render() {
     return (
-      <tr onClick={() => console.log('i\'ve been clicked')}>
+      <tr onClick={() => this.props.photoClickHandler('Tan Tan')}>
         <td className='photo-description'>{this.props.photo.description}</td>
       </tr>
     )

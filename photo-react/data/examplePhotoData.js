@@ -24,3 +24,5 @@ window.examplePhotoData = [
     rating: 3
   }
 ];
+
+window.photoTitle = 'Photo Library App';

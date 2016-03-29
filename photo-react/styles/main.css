@@ -2,17 +2,17 @@ body {
   background-color: #c9f1fe;
 }
 
-.image-list  {
+.photo-list  {
   text-align: left;
   background-color: white;
   border-collapse:collapse;
 }
 
-.image-list thead {
+.photo-list thead {
   background-color: gray;
 }
 
-.image-viewer .image {
+.photo-viewer .photo {
   width: 500px;
   height: 400px;
 }

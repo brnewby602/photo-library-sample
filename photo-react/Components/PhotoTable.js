@@ -8,10 +8,13 @@ class PhotoTable extends React.Component {
 
   render() {
     return (
-      <table>
+      <table className='photo-list'>
+        <thead>
+          <tr>Images</tr>
+        </thead>
         <tbody>
            {
-            this.props.photos.map( (photo) => ( <PhotoTableRow photo={photo} /> ) )
+            this.props.photos.map( (photo) => ( <PhotoTableRow photo={photo} photoClickHandler={this.props.photoClickHandler} /> ) )
            }
         </tbody>
       </table>
