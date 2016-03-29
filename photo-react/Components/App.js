@@ -9,10 +9,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-         Hello
+         <PhotoTable photos={this.props.photos} />
       </div>
     );
   }
 }
 
-ReactDOM.render(<App photos={examplePhotoData}/>, document.getElementById('app'));
+ReactDOM.render(<App photos={examplePhotoData} />, document.getElementById('app'));
+
+
+
