@@ -1,6 +1,12 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      currentPhoto: examplePhotoData[1],
+      photos: examplePhotoData
+
+    };
   }
 
   componentDidMount() {
@@ -12,18 +18,19 @@ class App extends React.Component {
         <h1>{this.props.title}</h1>
         <div className='container'>
           <div className='left'>
-            <PhotoTable photos={this.props.photos} photoClickHandler={this.handlePhotoRowClick} />
+            <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} />
           </div>
           <div className='right'>
-             <PhotoViewer photo={this.props.photos[1]}/>
+             <PhotoViewer photo={this.state.currentPhoto}/>
           </div>
         </div>
       </div>
     );
   }
 
-  handlePhotoRowClick() {
+  handlePhotoRowClick(photo) {
     console.log('inside handle photo row click in app');
+    this.setState({currentPhoto: photo});
   }
 }
 
