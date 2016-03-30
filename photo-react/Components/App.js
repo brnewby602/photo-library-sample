@@ -16,6 +16,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.props.title}</h1>
+        <div>
+          <AddNewPhoto />
+        </div>
         <div className='container'>
           <div className='left'>
             <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} />
