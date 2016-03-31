@@ -21,7 +21,7 @@ class App extends React.Component {
         </div>
         <div className='container'>
           <div className='left'>
-            <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} />
+            <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} photoSubmitHandler={this.handlePhotoAdd.bind(this)}/>
           </div>
           <div className='right'>
              <PhotoViewer photo={this.state.currentPhoto}/>
@@ -31,9 +31,15 @@ class App extends React.Component {
     );
   }
 
+  // Callback used when a photo a photo is clicked on in PhotoTableRow
   handlePhotoRowClick(photo) {
     console.log('inside handle photo row click in app');
     this.setState({currentPhoto: photo});
+  }
+
+  // Callback used when a photo gets submitted from AddNewPhoto Component
+  handlePhotoAdd(photo) {
+
   }
 }
 
