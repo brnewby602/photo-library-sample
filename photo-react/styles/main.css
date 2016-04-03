@@ -26,6 +26,10 @@ body {
   margin-left: 500px;
 }
 
+.rating {
+  padding-left: 10px;
+}
+
 .clear {
   clear: both;
 }

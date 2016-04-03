@@ -42,8 +42,9 @@ class App extends React.Component {
   }
 
   // Callback for the rating select element in PhotoViewer
-  handleRatingChange(photo) {
-    debugger;
+  handleRatingChange(rating) {
+    var photo = this.state.currentPhoto;
+    photo.rating = rating;
     this.setState({currentPhoto: photo});
   }
 }

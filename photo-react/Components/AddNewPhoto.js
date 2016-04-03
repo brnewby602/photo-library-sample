@@ -4,7 +4,8 @@ class AddNewPhoto extends React.Component {
 
     this.state = {
       src: '',
-      description: ''
+      description: '',
+      rating: 0
     };
 
   }
