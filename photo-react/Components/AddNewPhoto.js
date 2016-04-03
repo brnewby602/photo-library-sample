@@ -21,31 +21,19 @@ class AddNewPhoto extends React.Component {
     );
   }
 
-
   onPhotoSubmit(event) {
     event.preventDefault();
-    console.log('inside onPhotoSubmit, src = ' + this.state);
     this.props.photoSubmitHandler(this.state);
   }
 
- 
   handlePhotoSrcChange(e) {
-
-    console.log(this);
     this.setState({src: e.target.value});
   }
-
 
   handlePhotoTextChange(e) {
     this.setState({description: e.target.value});
   }
 
-/*
-        <form name='newimage' onSubmit={() => this.props.photoSubmitHandler}>
-
-
-
-*/
 }
 
 

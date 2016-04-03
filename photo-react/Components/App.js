@@ -10,9 +10,6 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-  }
-
   render() {
     return (
       <div>
@@ -25,7 +22,7 @@ class App extends React.Component {
             <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} />
           </div>
           <div className='right'>
-             <PhotoViewer photo={this.state.currentPhoto}/>
+             <PhotoViewer photo={this.state.currentPhoto} handleRatingChange={this.handleRatingChange.bind(this)}/>
           </div>
         </div>
       </div>
@@ -34,16 +31,20 @@ class App extends React.Component {
 
   // Callback used when a photo a photo is clicked on in PhotoTableRow
   handlePhotoRowClick(photo) {
-    console.log('inside handle photo row click in app');
     this.setState({currentPhoto: photo});
   }
 
   // Callback used when a photo gets submitted from AddNewPhoto Component
   handlePhotoAdd(photo) {
-    console.log('inside handlePhotoAdd');
      this.setState( {
        photos: this.state.photos.concat(photo)
      });
+  }
+
+  // Callback for the rating select element in PhotoViewer
+  handleRatingChange(photo) {
+    debugger;
+    this.setState({currentPhoto: photo});
   }
 }
 

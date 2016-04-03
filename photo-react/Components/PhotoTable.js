@@ -2,8 +2,6 @@ class PhotoTable extends React.Component {
 
   constructor(props) {
     super(props);
-
-    console.log("In PhotoTable constructor");
   }
 
   render() {
