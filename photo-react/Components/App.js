@@ -1,3 +1,4 @@
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,11 +18,11 @@ class App extends React.Component {
       <div>
         <h1>{this.props.title}</h1>
         <div>
-          <AddNewPhoto />
+          <AddNewPhoto photoSubmitHandler={this.handlePhotoAdd.bind(this)} />
         </div>
         <div className='container'>
           <div className='left'>
-            <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} photoSubmitHandler={this.handlePhotoAdd.bind(this)}/>
+            <PhotoTable photos={this.state.photos} photoClickHandler={this.handlePhotoRowClick.bind(this)} />
           </div>
           <div className='right'>
              <PhotoViewer photo={this.state.currentPhoto}/>
@@ -39,7 +40,10 @@ class App extends React.Component {
 
   // Callback used when a photo gets submitted from AddNewPhoto Component
   handlePhotoAdd(photo) {
-
+    console.log('inside handlePhotoAdd');
+     this.setState( {
+       photos: this.state.photos.concat(photo)
+     });
   }
 }
 
